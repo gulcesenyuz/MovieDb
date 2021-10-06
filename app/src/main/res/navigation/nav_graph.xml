@@ -3,38 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/first_fragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/first_fragment"
-        android:name="me.ibrahimsn.smoothbottombar.FirstFragment"
-        android:label="Dashboard"
-        tools:layout="@layout/fragment_first" >
+        android:id="@+id/homeFragment"
+        android:name="me.ibrahimsn.smoothbottombar.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/second_fragment" />
+            android:id="@+id/action_homeFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
     </fragment>
     <fragment
-        android:id="@+id/second_fragment"
-        android:name="me.ibrahimsn.smoothbottombar.SecondFragment"
-        android:label="Leaderboard"
-        tools:layout="@layout/fragment_second" >
+        android:id="@+id/favoritesFragment"
+        android:name="me.ibrahimsn.smoothbottombar.ui.FavoritesFragment"
+        android:label="Yor Favorites"
+        tools:layout="@layout/fragment_favorites">
         <action
-            android:id="@+id/action_secondFragment_to_thirdFragment"
-            app:destination="@id/third_fragment" />
+            android:id="@+id/action_favoritesFragment_to_prosfileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
-        android:id="@+id/third_fragment"
-        android:name="me.ibrahimsn.smoothbottombar.ThirdFragment"
-        android:label="Store"
-        tools:layout="@layout/fragment_third" >
-        <action
-            android:id="@+id/action_thirdFragment_to_fourthFragment"
-            app:destination="@id/fourth_fragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/fourth_fragment"
-        android:name="me.ibrahimsn.smoothbottombar.FourthFragment"
-        android:label="Profile"
-        tools:layout="@layout/fragment_fourth" />
+        android:id="@+id/profileFragment"
+        android:name="me.ibrahimsn.smoothbottombar.ui.ProfileFragment"
+        android:label="Your Profile"
+        tools:layout="@layout/fragment_profile"/>
 </navigation>
